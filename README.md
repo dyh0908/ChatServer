@@ -25,3 +25,5 @@ public.hpp定义了消息的类型，server文件夹下存放的例如chatservic
                    
 `/build`      :  编译cmake的过程中生成的中间文件，为了提高文件的可读性，查阅方便，将cmake编译后生成的中间文件放
                    到了build里，Makefile同样也在这里面，所以cmake后直接在/build里执行make命令就可以了。
+                   
+ `/autobuild.sh` : 写了一个简单的脚本以便自动化运行，也可以根据后面的编译方法手动编译。
