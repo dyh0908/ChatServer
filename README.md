@@ -18,7 +18,17 @@
 cd ./build <br>
 cmake .. <br>
 make <br>
-CMakeLists.txt 文件都是编译好的，直接在build目录下进行cmake，得到makefile等一些中间文件，直接执行make命令即可。
+CMakeLists.txt 文件都是编译好的，直接在build目录下进行cmake，得到makefile等一些中间文件，直接执行make命令即可。<br>
+
+**客户端使用示例：**<br>
+```
+./client 127.0.0.1 6000
+```
+**服务端使用示例：**<br>
+```
+./server
+```
+
 
 文件详解：
 --------
