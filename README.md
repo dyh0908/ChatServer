@@ -8,6 +8,18 @@
 可以工作在nginx tcp负载均衡环境中的集群聊天服务器和客户端源码,基于muduo网络库实现服务端的高并发、高性能，通过nginx进行负载均衡模块设计，通过redis缓存实现跨服务器通信，
 实现了高性能、高并发、多服务器的聊天项目。
 
+开发环境 ：
+-------
+
+本人使用的开发环境是ubuntu 20.04，使用了最新版的VSCode使得在windows系统下通过VSCode中的ssh插件<br>
+远程连接到linux进行方便的开发和构建cmake。<br>
+如果需要用到项目资源，只需要在ubuntu 20以上的版本中编译源码即可 <br>
+可以使用autobuild.sh一键编译，也可以通过下面的编译命令：<br>
+cd ./build <br>
+cmake .. <br>
+make <br>
+CMakeLists.txt 文件都是编译好的，直接在build目录下进行cmake，得到makefile等一些中间文件，直接执行make命令即可。
+
 文件详解：
 --------
 `/bin`                                                             ：用于生成可执行文件的文件夹，其中包含了生成的client和server。
@@ -26,4 +38,4 @@ public.hpp定义了消息的类型，server文件夹下存放的例如chatservic
 `/build`      :  编译cmake的过程中生成的中间文件，为了提高文件的可读性，查阅方便，将cmake编译后生成的中间文件放
                    到了build里，Makefile同样也在这里面，所以cmake后直接在/build里执行make命令就可以了。
                    
- `/autobuild.sh` : 写了一个简单的脚本以便自动化运行，也可以根据后面的编译方法手动编译。
+`/autobuild.sh` : 写了一个简单的脚本以便自动化运行，也可以根据上面的编译方法手动编译。
