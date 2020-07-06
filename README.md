@@ -74,8 +74,7 @@ int main(int argc,char**argv)
     {
         printf("create socket error: %s(error:%d)\n",strerror(errno),errno);
         return 0;
-    }
-    // 程序走到这代表创建成功
+    }    // 程序走到这代表创建成功
     
     // 清理功能，将servaddr每个都变成0
     memset(&servaddr,0,sizeof(servaddr));
@@ -120,3 +119,7 @@ int main(int argc,char**argv)
     return 0;
 }
 ```
+**总结一下阻塞型服务端的基本套接字编程：** <br>
+```
+1：创建相应类型的套接字 ——> 2: 将套接字绑定相应端口号、IP地址、IP协议三元组 ——> 3: 监听端口号，相当于端口可用，开启服务 <br>
+4: accept收到连接请求，建立连接 ——> 5: recv接收数据，将序列化好的数据放到buff里。
